@@ -1,0 +1,125 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;  
+  background: black;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+nav {
+  position: fixed;
+  top: 0;  
+  height: 100vh;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  font-size: 1.1em;  
+  grid-column: 1/2;
+  grid-row: 1/-1; 
+}
+
+nav div {
+  
+}
+
+.portfolio {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.skills {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.contact {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.portfolio {
+  grid-column: 3/6;  
+  
+  border: 2px solid grey;
+}
+
+.project {  
+  width: auto;
+  height: 200px;  
+}
+
+.project1 { 
+  background-color: lightpink;
+}
+
+.project2 {
+  background-color: lightskyblue;
+}
+
+.project3 { 
+  background-color: blueviolet;
+}
+
+.project4 { 
+  background-color: steelblue;
+}
+
+
+/* 576px for portrait phones */
+
+/* 768px for tablets */
+@media screen and (min-width: 600px){
+  nav {
+    width: 100px;
+    font-size: 1.3em; 
+  }
+
+  .project {     
+    width: auto;
+    height: 300px;  
+  }
+
+}
+
+/* 992px for laptops */
+@media screen and (min-width: 900px) {
+  nav {
+    width: 110px;
+    font-size: 1.4em; 
+  }
+
+  .project {     
+    width: auto;
+    height: 350px;  
+  }
+
+  
+
+  
+
+}
+
+/* 1200px for large devices */
+@media screen and (min-width: 1200px) {
+  nav {
+    width: 120px;
+    font-size: 1.5em; 
+  }
+
+  .project {     
+    width: auto;
+    height: 400px;  
+  }
+}
