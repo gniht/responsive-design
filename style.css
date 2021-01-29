@@ -6,7 +6,7 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;  
   background: black;
@@ -16,9 +16,9 @@ body {
 
 nav {
   position: fixed;
-  top: 0;  
-  height: 100vh;
-  width: 90px;
+  top: 15%;  
+  height: 60vh;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,9 +29,6 @@ nav {
   grid-row: 1/-1; 
 }
 
-nav div {
-  
-}
 
 .portfolio {
   padding: 10px;
@@ -49,15 +46,16 @@ nav div {
   text-decoration: none;
 }
 
-.portfolio {
+.portfolio-section {
+  display: flex;
+  flex-direction: column;  
   grid-column: 3/6;  
-  
-  border: 2px solid grey;
 }
 
-.project {  
-  width: auto;
-  height: 200px;  
+.project {
+  margin: 2px;  
+  width: 240px;
+  height: 240px;  
 }
 
 .project1 { 
@@ -81,33 +79,40 @@ nav div {
 
 /* 768px for tablets */
 @media screen and (min-width: 600px){
-  nav {
-    width: 100px;
+  nav {    
     font-size: 1.3em; 
   }
 
-  .project {     
-    width: auto;
-    height: 300px;  
+  
+  .portfolio-section {
+    grid-column: 3/6;
   }
+
+  .project {     
+    width: 260px;
+    height: 260px;  
+  }
+
+
+
 
 }
 
 /* 992px for laptops */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
   nav {
     width: 110px;
     font-size: 1.4em; 
   }
-
-  .project {     
-    width: auto;
-    height: 350px;  
+  .portfolio-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 2/8;
   }
-
-  
-
-  
+  .project {     
+    width: 280px;
+    height: 280px;  
+  }  
 
 }
 
@@ -119,7 +124,7 @@ nav div {
   }
 
   .project {     
-    width: auto;
-    height: 400px;  
+    width: 300px;
+    height: 300px;  
   }
 }
